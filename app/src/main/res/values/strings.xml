@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Pietjesbak</string>
+    <string name="naam_speler">Naam Speler</string>
+    <string name="pietjesbak">Pietjesbak</string>
+    <string name="Bevestig">Bevestig</string>
+    <string name="Naam_Speler">Naam Speler</string>
+    <string name="Pietjesbak">Pietjesbak</string>
+    <string name="enter_a_query_then_click_search">Enter a query, then click Search</string>
 </resources>
