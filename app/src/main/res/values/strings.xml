@@ -6,4 +6,6 @@
     <string name="Naam_Speler">Naam Speler</string>
     <string name="Pietjesbak">Pietjesbak</string>
     <string name="enter_a_query_then_click_search">Enter a query, then click Search</string>
+    <string name="facebook_app_id">1346617965523537</string>
+    <string name="facebook_login_protocol_scheme">fb1346617965523537</string>
 </resources>

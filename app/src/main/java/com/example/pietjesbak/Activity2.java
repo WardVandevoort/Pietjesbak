@@ -205,9 +205,11 @@ public class Activity2 extends AppCompatActivity {
 
                 if(beurtG == 1){
                     kansen1 = 0;
+                    kansen2 = 3;
                 }
                 else if(beurtG == 2){
                     kansen2 = 0;
+                    kansen1 = 3;
                 }
 
 
@@ -231,6 +233,7 @@ public class Activity2 extends AppCompatActivity {
                     zand1 = false;
 
 
+
                 }
                 else{
                     beurtG++;
@@ -239,6 +242,7 @@ public class Activity2 extends AppCompatActivity {
 
                     Toast.makeText(getApplicationContext(), toast6, Toast.LENGTH_LONG).show();
                     p1 = false;
+                    Ronde();
                     if(totaal1 == totaal2 || exaequo == true) {
                         kansen2 = 1;
                     }
@@ -262,6 +266,7 @@ public class Activity2 extends AppCompatActivity {
                     zand2 = false;
 
 
+
                 }
                 else{
                     beurtG--;
@@ -270,6 +275,7 @@ public class Activity2 extends AppCompatActivity {
 
                     Toast.makeText(getApplicationContext(), toast7, Toast.LENGTH_LONG).show();
                     p2 = false;
+                    Ronde();
                     if(totaal1 == totaal2 || exaequo == true) {
                         kansen1 = 1;
                     }
@@ -281,6 +287,16 @@ public class Activity2 extends AppCompatActivity {
                 break;
         }
 
+
+
+
+
+
+
+    }
+
+    public void Ronde(){
+
         if(p1 == false && p2 == false) {
             if(totaal1 > totaal2){
 
@@ -289,6 +305,7 @@ public class Activity2 extends AppCompatActivity {
                 p2 = true;
                 exaequo = false;
                 StreepjeWeg();
+                Winnaar();
 
             }
             else if(totaal1 < totaal2){
@@ -298,6 +315,7 @@ public class Activity2 extends AppCompatActivity {
                 p2 = true;
                 exaequo = false;
                 StreepjeWeg();
+                Winnaar();
 
             }
             else{
@@ -319,10 +337,6 @@ public class Activity2 extends AppCompatActivity {
 
             }
         }
-
-
-
-
 
     }
 
@@ -493,37 +507,6 @@ public class Activity2 extends AppCompatActivity {
 
     }
 
-    /*public void Specialekes(){
-
-        if(dobbelsteen1 == dobbelsteen2 && dobbelsteen1 == dobbelsteen3){
-            if(beurtG == 1){
-                zand1 = true;
-            }
-            else if(beurtG == 2){
-                zand2 = true;
-            }
-        }
-        else if(dobbelsteen1 == 1 && dobbelsteen2 == 1 && dobbelsteen3 == 1){
-            if(beurtG == 1){
-                drieApen1 = true;
-            }
-            else if(beurtG == 2){
-                drieApen2 = true;
-            }
-        }
-        else if(dobbelsteen1 == 6 && dobbelsteen2 == 5 && dobbelsteen3 == 4 ||
-                dobbelsteen1 == 5 && dobbelsteen2 == 4 && dobbelsteen3 == 6 ||
-                dobbelsteen1 == 4 && dobbelsteen2 == 6 && dobbelsteen3 == 5){
-            if(beurtG == 1){
-                soixanteNeuf1 = true;
-            }
-            else if(beurtG == 2){
-                soixanteNeuf2 = true;
-            }
-        }
-
-    }*/
-
     public void Specialekes1(){
 
         if(dobbelsteen1 == dobbelsteen2 && dobbelsteen1 == dobbelsteen3){
@@ -555,6 +538,8 @@ public class Activity2 extends AppCompatActivity {
 
         }
 
+
+
     }
 
     public void Specialekes2(){
@@ -584,6 +569,7 @@ public class Activity2 extends AppCompatActivity {
 
 
         }
+
 
     }
 
@@ -615,11 +601,13 @@ public class Activity2 extends AppCompatActivity {
                     String toast12 = string1 + " gooit 3 apen en wint het spel!";
 
                     Toast.makeText(getApplicationContext(), toast12, Toast.LENGTH_LONG).show();
+                    i = 7;
                 }
                 else{
                     String toast13 = string1 + " gooit 3 apen, maar heeft nog al zijn streepjes, " + string2 + " wint het spel!";
 
                     Toast.makeText(getApplicationContext(), toast13, Toast.LENGTH_LONG).show();
+                    i2 = 7;
                 }
             }
             else {
@@ -654,11 +642,13 @@ public class Activity2 extends AppCompatActivity {
                     String toast14 = string2 + " gooit 3 apen en wint het spel!";
 
                     Toast.makeText(getApplicationContext(), toast14, Toast.LENGTH_LONG).show();
+                    i2 = 7;
                 }
                 else{
                     String toast15 = string2 + " gooit 3 apen, maar heeft nog al zijn streepjes, " + string1 + " wint het spel!";
 
                     Toast.makeText(getApplicationContext(), toast15, Toast.LENGTH_LONG).show();
+                    i = 7;
                 }
             }
             else {
@@ -676,6 +666,38 @@ public class Activity2 extends AppCompatActivity {
 
     }
 
+    public void Winnaar(){
+
+        if(i >= 7){
+            String toast20 = string1 + " wint het spel!";
+
+            Toast.makeText(getApplicationContext(), toast20, Toast.LENGTH_LONG).show();
+
+            Intent intent = new Intent(this, Activity_3.class);
+            Bundle extras = new Bundle();
+            extras.putString("WINNAAR",string1);
+            extras.putString("VERLIEZER",string2);
+            intent.putExtras(extras);
+            startActivity(intent);
+
+
+        }
+        else if(i2 >= 7){
+            String toast21 = string2 + " wint het spel!";
+
+            Toast.makeText(getApplicationContext(), toast21, Toast.LENGTH_LONG).show();
+
+            Intent intent = new Intent(this, Activity_3.class);
+            Bundle extras = new Bundle();
+            extras.putString("WINNAAR",string2);
+            extras.putString("VERLIEZER",string1);
+            intent.putExtras(extras);
+            startActivity(intent);
+
+
+        }
+
+    }
 
 
 

@@ -10,48 +10,117 @@
 9        android:targetSdkVersion="29" />
 9-->C:\Users\Gebruiker\AndroidStudioProjects\Pietjesbak\app\src\main\AndroidManifest.xml
 10
-11    <application
-11-->C:\Users\Gebruiker\AndroidStudioProjects\Pietjesbak\app\src\main\AndroidManifest.xml:5:5-24:19
-12        android:allowBackup="true"
-12-->C:\Users\Gebruiker\AndroidStudioProjects\Pietjesbak\app\src\main\AndroidManifest.xml:6:9-35
-13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-13-->[androidx.core:core:1.0.1] C:\Users\Gebruiker\.gradle\caches\transforms-2\files-2.1\8f8ab13dc8f4e84e14a8bb3d9ac92bc4\core-1.0.1\AndroidManifest.xml:22:18-86
-14        android:debuggable="true"
-15        android:icon="@mipmap/ic_launcher"
-15-->C:\Users\Gebruiker\AndroidStudioProjects\Pietjesbak\app\src\main\AndroidManifest.xml:7:9-43
-16        android:label="@string/app_name"
-16-->C:\Users\Gebruiker\AndroidStudioProjects\Pietjesbak\app\src\main\AndroidManifest.xml:8:9-41
-17        android:roundIcon="@mipmap/ic_launcher_round"
-17-->C:\Users\Gebruiker\AndroidStudioProjects\Pietjesbak\app\src\main\AndroidManifest.xml:9:9-54
-18        android:supportsRtl="true"
-18-->C:\Users\Gebruiker\AndroidStudioProjects\Pietjesbak\app\src\main\AndroidManifest.xml:10:9-35
-19        android:testOnly="true"
-20        android:theme="@style/AppTheme" >
-20-->C:\Users\Gebruiker\AndroidStudioProjects\Pietjesbak\app\src\main\AndroidManifest.xml:11:9-40
-21        <activity android:name="com.example.pietjesbak.Activity2" />
-21-->C:\Users\Gebruiker\AndroidStudioProjects\Pietjesbak\app\src\main\AndroidManifest.xml:12:9-56
-21-->C:\Users\Gebruiker\AndroidStudioProjects\Pietjesbak\app\src\main\AndroidManifest.xml:12:19-44
-22        <activity android:name="com.example.pietjesbak.MainActivity" >
-22-->C:\Users\Gebruiker\AndroidStudioProjects\Pietjesbak\app\src\main\AndroidManifest.xml:13:9-19:20
-22-->C:\Users\Gebruiker\AndroidStudioProjects\Pietjesbak\app\src\main\AndroidManifest.xml:13:19-47
-23            <intent-filter>
-23-->C:\Users\Gebruiker\AndroidStudioProjects\Pietjesbak\app\src\main\AndroidManifest.xml:14:13-18:29
-24                <action android:name="android.intent.action.MAIN" />
-24-->C:\Users\Gebruiker\AndroidStudioProjects\Pietjesbak\app\src\main\AndroidManifest.xml:15:17-69
-24-->C:\Users\Gebruiker\AndroidStudioProjects\Pietjesbak\app\src\main\AndroidManifest.xml:15:25-66
-25
-26                <category android:name="android.intent.category.LAUNCHER" />
-26-->C:\Users\Gebruiker\AndroidStudioProjects\Pietjesbak\app\src\main\AndroidManifest.xml:17:17-77
-26-->C:\Users\Gebruiker\AndroidStudioProjects\Pietjesbak\app\src\main\AndroidManifest.xml:17:27-74
-27            </intent-filter>
-28        </activity>
-29
-30        <meta-data
-30-->C:\Users\Gebruiker\AndroidStudioProjects\Pietjesbak\app\src\main\AndroidManifest.xml:21:9-23:57
-31            android:name="preloaded_fonts"
-31-->C:\Users\Gebruiker\AndroidStudioProjects\Pietjesbak\app\src\main\AndroidManifest.xml:22:13-43
-32            android:resource="@array/preloaded_fonts" />
-32-->C:\Users\Gebruiker\AndroidStudioProjects\Pietjesbak\app\src\main\AndroidManifest.xml:23:13-54
-33    </application>
-34
-35</manifest>
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\Users\Gebruiker\AndroidStudioProjects\Pietjesbak\app\src\main\AndroidManifest.xml:5:5-66
+11-->C:\Users\Gebruiker\AndroidStudioProjects\Pietjesbak\app\src\main\AndroidManifest.xml:5:22-64
+12
+13    <application
+13-->C:\Users\Gebruiker\AndroidStudioProjects\Pietjesbak\app\src\main\AndroidManifest.xml:7:5-38:19
+14        android:allowBackup="true"
+14-->C:\Users\Gebruiker\AndroidStudioProjects\Pietjesbak\app\src\main\AndroidManifest.xml:8:9-35
+15        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+15-->[androidx.core:core:1.0.1] C:\Users\Gebruiker\.gradle\caches\transforms-2\files-2.1\8f8ab13dc8f4e84e14a8bb3d9ac92bc4\core-1.0.1\AndroidManifest.xml:22:18-86
+16        android:debuggable="true"
+17        android:icon="@mipmap/ic_launcher"
+17-->C:\Users\Gebruiker\AndroidStudioProjects\Pietjesbak\app\src\main\AndroidManifest.xml:9:9-43
+18        android:label="@string/app_name"
+18-->C:\Users\Gebruiker\AndroidStudioProjects\Pietjesbak\app\src\main\AndroidManifest.xml:10:9-41
+19        android:roundIcon="@mipmap/ic_launcher_round"
+19-->C:\Users\Gebruiker\AndroidStudioProjects\Pietjesbak\app\src\main\AndroidManifest.xml:11:9-54
+20        android:supportsRtl="true"
+20-->C:\Users\Gebruiker\AndroidStudioProjects\Pietjesbak\app\src\main\AndroidManifest.xml:12:9-35
+21        android:testOnly="true"
+22        android:theme="@style/AppTheme" >
+22-->C:\Users\Gebruiker\AndroidStudioProjects\Pietjesbak\app\src\main\AndroidManifest.xml:13:9-40
+23        <meta-data
+23-->C:\Users\Gebruiker\AndroidStudioProjects\Pietjesbak\app\src\main\AndroidManifest.xml:15:9-16:54
+24            android:name="com.facebook.sdk.ApplicationId"
+24-->C:\Users\Gebruiker\AndroidStudioProjects\Pietjesbak\app\src\main\AndroidManifest.xml:15:20-65
+25            android:value="@string/facebook_app_id" />
+25-->C:\Users\Gebruiker\AndroidStudioProjects\Pietjesbak\app\src\main\AndroidManifest.xml:16:13-52
+26
+27        <activity android:name="com.example.pietjesbak.Activity_3" />
+27-->C:\Users\Gebruiker\AndroidStudioProjects\Pietjesbak\app\src\main\AndroidManifest.xml:19:9-57
+27-->C:\Users\Gebruiker\AndroidStudioProjects\Pietjesbak\app\src\main\AndroidManifest.xml:19:19-45
+28        <activity android:name="com.example.pietjesbak.Activity2" />
+28-->C:\Users\Gebruiker\AndroidStudioProjects\Pietjesbak\app\src\main\AndroidManifest.xml:20:9-47
+28-->C:\Users\Gebruiker\AndroidStudioProjects\Pietjesbak\app\src\main\AndroidManifest.xml:20:19-44
+29        <activity android:name="com.example.pietjesbak.MainActivity" >
+29-->C:\Users\Gebruiker\AndroidStudioProjects\Pietjesbak\app\src\main\AndroidManifest.xml:21:9-27:20
+29-->C:\Users\Gebruiker\AndroidStudioProjects\Pietjesbak\app\src\main\AndroidManifest.xml:21:19-47
+30            <intent-filter>
+30-->C:\Users\Gebruiker\AndroidStudioProjects\Pietjesbak\app\src\main\AndroidManifest.xml:22:13-26:29
+31                <action android:name="android.intent.action.MAIN" />
+31-->C:\Users\Gebruiker\AndroidStudioProjects\Pietjesbak\app\src\main\AndroidManifest.xml:23:17-69
+31-->C:\Users\Gebruiker\AndroidStudioProjects\Pietjesbak\app\src\main\AndroidManifest.xml:23:25-66
+32
+33                <category android:name="android.intent.category.LAUNCHER" />
+33-->C:\Users\Gebruiker\AndroidStudioProjects\Pietjesbak\app\src\main\AndroidManifest.xml:25:17-77
+33-->C:\Users\Gebruiker\AndroidStudioProjects\Pietjesbak\app\src\main\AndroidManifest.xml:25:27-74
+34            </intent-filter>
+35        </activity>
+36
+37        <meta-data
+37-->C:\Users\Gebruiker\AndroidStudioProjects\Pietjesbak\app\src\main\AndroidManifest.xml:29:9-31:57
+38            android:name="preloaded_fonts"
+38-->C:\Users\Gebruiker\AndroidStudioProjects\Pietjesbak\app\src\main\AndroidManifest.xml:30:13-43
+39            android:resource="@array/preloaded_fonts" />
+39-->C:\Users\Gebruiker\AndroidStudioProjects\Pietjesbak\app\src\main\AndroidManifest.xml:31:13-54
+40
+41        <provider
+41-->C:\Users\Gebruiker\AndroidStudioProjects\Pietjesbak\app\src\main\AndroidManifest.xml:33:9-36:38
+42            android:name="com.facebook.FacebookContentProvider"
+42-->C:\Users\Gebruiker\AndroidStudioProjects\Pietjesbak\app\src\main\AndroidManifest.xml:35:13-64
+43            android:authorities="com.facebook.app.FacebookContentProvider1346617965523537"
+43-->C:\Users\Gebruiker\AndroidStudioProjects\Pietjesbak\app\src\main\AndroidManifest.xml:34:13-91
+44            android:exported="true" />
+44-->C:\Users\Gebruiker\AndroidStudioProjects\Pietjesbak\app\src\main\AndroidManifest.xml:36:13-36
+45
+46        <activity
+46-->[com.facebook.android:facebook-common:4.42.0] C:\Users\Gebruiker\.gradle\caches\transforms-2\files-2.1\745388a440e9bb1e3b8fb2839a2e134c\jetified-facebook-common-4.42.0\AndroidManifest.xml:29:9-32:66
+47            android:name="com.facebook.FacebookActivity"
+47-->[com.facebook.android:facebook-common:4.42.0] C:\Users\Gebruiker\.gradle\caches\transforms-2\files-2.1\745388a440e9bb1e3b8fb2839a2e134c\jetified-facebook-common-4.42.0\AndroidManifest.xml:30:13-57
+48            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+48-->[com.facebook.android:facebook-common:4.42.0] C:\Users\Gebruiker\.gradle\caches\transforms-2\files-2.1\745388a440e9bb1e3b8fb2839a2e134c\jetified-facebook-common-4.42.0\AndroidManifest.xml:31:13-96
+49            android:theme="@style/com_facebook_activity_theme" />
+49-->[com.facebook.android:facebook-common:4.42.0] C:\Users\Gebruiker\.gradle\caches\transforms-2\files-2.1\745388a440e9bb1e3b8fb2839a2e134c\jetified-facebook-common-4.42.0\AndroidManifest.xml:32:13-63
+50        <activity android:name="com.facebook.CustomTabMainActivity" />
+50-->[com.facebook.android:facebook-common:4.42.0] C:\Users\Gebruiker\.gradle\caches\transforms-2\files-2.1\745388a440e9bb1e3b8fb2839a2e134c\jetified-facebook-common-4.42.0\AndroidManifest.xml:33:9-71
+50-->[com.facebook.android:facebook-common:4.42.0] C:\Users\Gebruiker\.gradle\caches\transforms-2\files-2.1\745388a440e9bb1e3b8fb2839a2e134c\jetified-facebook-common-4.42.0\AndroidManifest.xml:33:19-68
+51        <activity android:name="com.facebook.CustomTabActivity" />
+51-->[com.facebook.android:facebook-common:4.42.0] C:\Users\Gebruiker\.gradle\caches\transforms-2\files-2.1\745388a440e9bb1e3b8fb2839a2e134c\jetified-facebook-common-4.42.0\AndroidManifest.xml:34:9-67
+51-->[com.facebook.android:facebook-common:4.42.0] C:\Users\Gebruiker\.gradle\caches\transforms-2\files-2.1\745388a440e9bb1e3b8fb2839a2e134c\jetified-facebook-common-4.42.0\AndroidManifest.xml:34:19-64
+52        <!--
+53         The initialization ContentProvider will call FacebookSdk.sdkInitialize automatically
+54         with the application context. This config is merged in with the host app's manifest,
+55         but there can only be one provider with the same authority activated at any given
+56         point; so if the end user has two or more different apps that use Facebook SDK, only the
+57         first one will be able to use the provider. To work around this problem, we use the
+58         following placeholder in the authority to identify each host application as if it was
+59         a completely different provider.
+60        -->
+61        <provider
+61-->[com.facebook.android:facebook-core:4.42.0] C:\Users\Gebruiker\.gradle\caches\transforms-2\files-2.1\3734e1433de7b1fef3a0d1cdd54650e3\jetified-facebook-core-4.42.0\AndroidManifest.xml:39:9-42:40
+62            android:name="com.facebook.internal.FacebookInitProvider"
+62-->[com.facebook.android:facebook-core:4.42.0] C:\Users\Gebruiker\.gradle\caches\transforms-2\files-2.1\3734e1433de7b1fef3a0d1cdd54650e3\jetified-facebook-core-4.42.0\AndroidManifest.xml:40:13-70
+63            android:authorities="com.example.pietjesbak.FacebookInitProvider"
+63-->[com.facebook.android:facebook-core:4.42.0] C:\Users\Gebruiker\.gradle\caches\transforms-2\files-2.1\3734e1433de7b1fef3a0d1cdd54650e3\jetified-facebook-core-4.42.0\AndroidManifest.xml:41:13-72
+64            android:exported="false" />
+64-->[com.facebook.android:facebook-core:4.42.0] C:\Users\Gebruiker\.gradle\caches\transforms-2\files-2.1\3734e1433de7b1fef3a0d1cdd54650e3\jetified-facebook-core-4.42.0\AndroidManifest.xml:42:13-37
+65
+66        <receiver
+66-->[com.facebook.android:facebook-core:4.42.0] C:\Users\Gebruiker\.gradle\caches\transforms-2\files-2.1\3734e1433de7b1fef3a0d1cdd54650e3\jetified-facebook-core-4.42.0\AndroidManifest.xml:44:9-50:20
+67            android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver"
+67-->[com.facebook.android:facebook-core:4.42.0] C:\Users\Gebruiker\.gradle\caches\transforms-2\files-2.1\3734e1433de7b1fef3a0d1cdd54650e3\jetified-facebook-core-4.42.0\AndroidManifest.xml:45:13-86
+68            android:exported="false" >
+68-->[com.facebook.android:facebook-core:4.42.0] C:\Users\Gebruiker\.gradle\caches\transforms-2\files-2.1\3734e1433de7b1fef3a0d1cdd54650e3\jetified-facebook-core-4.42.0\AndroidManifest.xml:46:13-37
+69            <intent-filter>
+69-->[com.facebook.android:facebook-core:4.42.0] C:\Users\Gebruiker\.gradle\caches\transforms-2\files-2.1\3734e1433de7b1fef3a0d1cdd54650e3\jetified-facebook-core-4.42.0\AndroidManifest.xml:47:13-49:29
+70                <action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED" />
+70-->[com.facebook.android:facebook-core:4.42.0] C:\Users\Gebruiker\.gradle\caches\transforms-2\files-2.1\3734e1433de7b1fef3a0d1cdd54650e3\jetified-facebook-core-4.42.0\AndroidManifest.xml:48:17-95
+70-->[com.facebook.android:facebook-core:4.42.0] C:\Users\Gebruiker\.gradle\caches\transforms-2\files-2.1\3734e1433de7b1fef3a0d1cdd54650e3\jetified-facebook-core-4.42.0\AndroidManifest.xml:48:25-92
+71            </intent-filter>
+72        </receiver>
+73    </application>
+74
+75</manifest>
